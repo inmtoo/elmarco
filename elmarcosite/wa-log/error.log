@@ -1,0 +1,54 @@
+
+2022-12-24 05:46:27 127.0.0.1
+webasyst/shop/?module=product&action=save
+POST [
+  'product' => [
+    'id' => 'new',
+    'name' => '',
+    'status' => '1',
+    'url' => '',
+    'type_id' => '1',
+    'tax_id' => '',
+    'categories.deleted' => '',
+    'categories' => [
+      '1',
+    ],
+    'sets' => [
+      '',
+    ],
+    'sku_type' => '1',
+    'base_price_selectable' => '0',
+    'purchase_price_selectable' => '0',
+    'compare_price_selectable' => '0',
+    'currency' => 'RUB',
+    'summary' => '',
+    'tags' => '',
+    'meta_title' => '',
+    'meta_keywords' => '',
+    'meta_description' => '',
+    'og' => [
+      'title' => '',
+      'image' => '',
+      'video' => '',
+      'description' => '',
+      'type' => '',
+    ],
+    'description' => '',
+    'params' => '',
+  ],
+  'new_category' => '',
+]
+Uncaught exception waException:
+Выберите хотя бы одно значение (500)
+## wa-apps/shop/lib/actions/product/shopProductSave.controller.php(86)
+#0 wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#1 wa-system/controller/waJsonController.class.php(28): waController->run()
+#2 wa-system/controller/waFrontController.class.php(263): waJsonController->run()
+#3 wa-apps/shop/lib/classes/shopFrontController.class.php(22): waFrontController->runController()
+#4 wa-system/controller/waFrontController.class.php(190): shopFrontController->runController()
+#5 wa-system/controller/waFrontController.class.php(84): waFrontController->execute()
+#6 wa-system/controller/waDispatch.class.php(162): waFrontController->dispatch()
+#7 wa-system/controller/waDispatch.class.php(32): waDispatch->dispatchBackend()
+#8 wa-system/waSystem.class.php(614): waDispatch->dispatch()
+#9 index.php(7): waSystem->dispatch()
+#10 {main}
